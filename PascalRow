@@ -1,0 +1,17 @@
+function pascalRow(n){ 
+    let arr=[];
+
+    for (let j = 0; j <= n; j++) {
+        arr.push(C(j, n));
+    
+    }
+    
+    return arr;
+}
+
+function  C( k,  n) {
+    if (k == 0 || k == n) return 1;
+    if (k == 1) return n;
+    return C(k - 1, n - 1) + C(k, n - 1);
+}
+

@@ -1,0 +1,9 @@
+function nonZeros(v, a){
+    let result = v + a;
+    return remove(v) + remove(a) === remove(result) ? 'YES' : 'NO';
+}
+
+
+function remove(n) {
+    return Number(String(n).split('0').join(''));
+}

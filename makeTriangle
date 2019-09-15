@@ -1,0 +1,11 @@
+function makeTriangle(a, b, c){
+   let arr=[a,b,c];
+   arr.sort((a,b)=>a-b);
+   let check =0;
+   while(arr[0]+arr[1] <= arr[2]) {
+       arr[0] +=1;
+       check+=1;
+   }
+   return check;
+   
+}

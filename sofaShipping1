@@ -1,0 +1,19 @@
+function sofaShipping(a){
+    let result =0;
+    for(let i=0; i< a.length;i++) {
+        let index  = findIndex(a,Math.min(...a));
+        a = [...a.slice(0,index),...a.slice(index+1,a.length)];
+        result += index+1;
+        i=-1;
+    }
+    return result;
+}
+
+
+function findIndex(arr,value) {
+    for(let i =0; i< arr.length;i++) {
+        if(arr[i]== value) {
+            return i;
+        }
+    }
+}
